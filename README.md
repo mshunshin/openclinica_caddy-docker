@@ -1,5 +1,9 @@
 # Adding a Caddy reverse SSL to OpenClinica
 
+## 0 Previously...
+
+You will have started an openclinica server (mshunshin/openclinica-docker) and associated postgres server and put them on a docker network called trial-net
+
 ## 1 Make a volume for the certificates
 
 ```
