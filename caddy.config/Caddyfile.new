@@ -1,0 +1,17 @@
+(common) {
+  log / stdout "{combined}"
+  errors stderr
+  tls your@email.com
+}
+
+replace_this_with_your_domain.com {
+import common
+proxy /OpenClinica oc:8080 {
+  transparent
+}
+proxy /randi randi:8080 {
+  transparent
+}
+
+}
+
