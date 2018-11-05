@@ -58,6 +58,6 @@ docker build -t occaddy .
 Put it on the correct network
 
 ```
-docker run -d -p 80:80 -p 443:443 --name occaddy -v caddycert:/root/.caddy --network oc-net occaddy
+docker run -d -p 80:80 -p 443:443 --name occaddy -v caddycert:/root/.caddy --network trial-net occaddy
 ```
 
