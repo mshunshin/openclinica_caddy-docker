@@ -17,10 +17,33 @@ cd openclinica_caddy-docker
 
 You will need to put in your own email address and site URL into the Caddy file.
 
+First copy the template Caddyfile
+
 ```
 cp ./caddy.config/Caddyfile.new ./caddy.config/Caddyfile
+```
 
+Then edit it
+
+
+```
 vi .caddy.config/Caddyfile
+
+(common) {
+  log / stdout "{combined}"
+  errors stderr
+  tls your@email.com
+}
+
+replace_this_with_your_domain.com {
+  import common
+  proxy /OpenClinica oc:8080 {
+    transparent
+  }
+  proxy /randi randi:8080 {
+    transparent
+  }
+}
 
 ````
 
