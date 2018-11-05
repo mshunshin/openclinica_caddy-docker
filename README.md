@@ -4,6 +4,8 @@
 
 You will have started an openclinica server (mshunshin/openclinica-docker) and associated postgres server and put them on a docker network called trial-net
 
+You might also have started a RANDI sever (mshunshin/randi-docker) and associated postgres server to do your randomisation, and put them on the same network - trial-net
+
 ## 1 Make a volume for the certificates
 
 ```
